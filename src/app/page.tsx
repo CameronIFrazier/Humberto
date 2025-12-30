@@ -3,6 +3,7 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline"; // example icon
 import ContactForm from "./components/ContactFrom";
+import ContactFormDesktop from "./components/ContactFormDesktop";
 import Image from "next/image";
 import { useState } from "react";
 export default function Home() {
@@ -258,128 +259,98 @@ export default function Home() {
 
         <section id="#contact-form"></section>
         <ContactForm></ContactForm>
-        
       </section>
 
       {/* Desktop Viewport */}
       <section className="hidden md:flex flex-col items-center justify-center bg-white min-h-screen w-full">
         {/* Header Section */}
-        <section className="bg-gray-700 w-full flex flex-col items-center p-4 justify-center">
-          <div className="w-[75%] flex flex-col items-start justify-start">
-            <div className="w-full flex flex-row justify-between">
-              <header className="text-white text-sm font-bold">
-                EMAIL US AT
-              </header>
-              <Image
-                src={"/images/smartphone-call.png"}
-                alt="icon"
-                width={30}
-                height={30}
-                className="object-contain "
-              ></Image>
-              <header className="text-white text-sm font-bold">
-                CALL US ON
+        <section className="bg-white w-[75%] flex flex-row items-center justify-center gap-24">
+          <Image
+            src={"/images/image.png"}
+            alt="Logo"
+            className="object-contain"
+            width={100} // adjust as needed
+            height={50} // adjust as needed
+          ></Image>
+          {/* Phone Section */}
+          <div className="flex flex-row justify-center items-center gap-2">
+            <Image
+              src={"/images/smartphone-call.png"}
+              alt="Logo"
+              className="object-contain"
+              width={40} // adjust as needed
+              height={40} // adjust as needed
+            ></Image>
+            <div className="flex flex-col">
+              <header className="text-gray-700 font-bold">CALL US ON </header>
+              <header className="text-gray-700">909-609-6815</header>
+            </div>
+          </div>
+          {/* Phone Section end*/}
+
+          {/* Email Section */}
+          <div className="flex flex-row justify-center items-start gap-2">
+            <Image
+              src={"/images/mailicon.png"}
+              alt="Icon"
+              className="object-contain"
+              width={45} // adjust as needed
+              height={45} // adjust as needed
+            ></Image>
+            <div className="flex flex-col">
+              <header className="text-gray-700 font-bold">EMAIL US AT </header>
+              <header className="text-gray-700">
+                drcleanhouse12@gmail.com
               </header>
             </div>
           </div>
-
-          <div className="w-[75%] flex flex-col items-start justify-start pt-2">
-            <div className="w-full flex flex-row justify-between">
-              <header className="text-white text-xs">
-                dRCleanHouse@gmail.com
-              </header>
-              {/* QUICK EMAIL 
-              <a href="mailto:dRCleanHouse@gmail.com?subject=Quote Request&body=Hi, I would like a quote.">
-  Email Us
-</a> */}
-
-              <header className="text-white text-sm ">900-509-6815</header>
-            </div>
+          {/* Email Section end*/}
+          {/* Other Section */}
+          <div className="flex flex-row justify-center items-center gap-2">
+            
           </div>
+          {/* Other Section end*/}
         </section>
         {/* Header section end */}
 
-        {/* Logo Section begin */}
+        {/* Gray bar section  */}
 
-        <section className=" w-full flex flex-row items-center justify-center pt-4">
-          <div className="w-[75%] flex flex-row items-center justify-between relative">
-            <Image
-              src={"/images/image.png"}
-              alt="Logo"
-              className="object-contain"
-              width={100} // adjust as needed
-              height={50} // adjust as needed
-            ></Image>
-            <Popover className="relative">
-              <PopoverButton className="p-2 rounded-md hover:bg-gray-100 focus:outline-none">
-                <Bars3Icon className="h-6 w-6 text-black" />
-              </PopoverButton>
-
-              {/* Popover panel */}
-              <PopoverPanel
-                anchor="bottom"
-                className="mt-2 flex flex-col rounded-lg bg-gray-100 p-4 shadow-lg"
-              >
-                <a
-                  onClick={() => {
-                    document
-                      .getElementById("#house-cleaning")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                  className="px-2 py-2 rounded hover:bg-gray-200 text-black cursor-pointer"
-                >
-                  House Cleaning
-                </a>
-                <a
-                  onClick={() => {
-                    document
-                      .getElementById("#house-painting")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                  className="px-2 py-2 rounded hover:bg-gray-200 text-black cursor-pointer"
-                >
-                  House Painting
-                </a>
-                <a
-                  onClick={() => {
-                    document
-                      .getElementById("#popcorn-ceiling")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                  className="px-2 py-2 rounded hover:bg-gray-200 text-black cursor-pointer"
-                >
-                  Popcorn Ceiling Removal
-                </a>
-                <a
-                  onClick={() => {
-                    document
-                      .getElementById("#contact-form")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                  className="px-2 py-2 rounded hover:bg-gray-200 text-black cursor-pointer"
-                >
-                  Email Us
-                </a>
-              </PopoverPanel>
-            </Popover>
-          </div>
+        <section className=" w-full flex flex-row items-center justify-center pt-4 gap-8 bg-gray-700 pb-4">
+          <header
+            onClick={() => {
+              document
+                .getElementById("house-cleaning")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="text-white font cursor-pointer"
+          >
+            House Cleaning Services
+          </header>
+          <header className="text-white font">
+            Construction/Remodeling Servies{" "}
+          </header>
+          <header className="text-orange-300 font">We serve the Inland Empire, Orange County, and Los Angeles areas </header>
+          
         </section>
 
-                  {/* Logo Section end */}
-
-                  <section className="w-full bg mt-4 flex flex-col justify-center items-center">
-          {/* Hero Image with Text Overlay begin*/}
+        {/* Gray bar Section end */}
+{/* Hero Image with Text Overlay begin*/}
+        <section className="w-full bg mflex flex-col justify-center items-center">
+          
           <div
-            className="h-200 w-full bg-center bg-cover bg-no-repeat flex flex-col items-center justify-center"
+            className="h-210 w-full bg-center bg-cover bg-no-repeat flex flex-col items-center justify-center"
             style={{ backgroundImage: "url('/images/low-lighting-room.jpg')" }}
           >
             <div className="flex flex-col p-4">
-              <p className=" text-white text-font-bold text-4xl font-bold">
-                Tired of your dirty House?<br></br>
+              <p className=" text-white text-font-bold text-8xl font-bold">
+                Want your house this clean?
+                <br></br> So do we.<br></br>
               </p>
-              <p className="">So are we.</p>
+             
             </div>
+            
           </div>
+          
           {/* Hero Image with Text Overlay end*/}
           <div className="flex flex-col w-auto justify-center items-center ">
             <header className="font-bold text-4xl text-gray-700 p-4 ">
@@ -389,7 +360,8 @@ export default function Home() {
         </section>
 
         {/*services section begin*/}
-        <div className="relative h-64 w-full flex flex-col items-center justify-center">
+        <section className="grid grid-cols-3 justify-center center-tems">
+        <section className="relative h-125 w-full flex flex-col items-center justify-center">
           {/* Background image */}
           <div
             className="absolute inset-0 bg-center bg-cover bg-no-repeat"
@@ -401,7 +373,7 @@ export default function Home() {
 
           {/* Content above overlay */}
           <section
-            id="#house-cleaning"
+            id="house-cleaning"
             className="relative z-10 flex flex-col items-center justify-center gap-2 p-4 text-center"
           >
             <p className="text-white text-4xl font-bold">
@@ -416,7 +388,7 @@ export default function Home() {
             <button
               onClick={() => {
                 document
-                  .getElementById("#contact-form")
+                  .getElementById("contact-form")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="inline-block px-2 py-1 rounded bg-gray-500 text-white"
@@ -424,10 +396,10 @@ export default function Home() {
               Email Us
             </button>
           </section>
-        </div>
+        </section>
         <section
-          id="#house-painting"
-          className="relative h-64 w-full flex flex-col items-center justify-center"
+          id="house-painting"
+          className="relative h-125 w-full flex flex-col items-center justify-center"
         >
           {/* Background image */}
           <div
@@ -452,7 +424,7 @@ export default function Home() {
             <button
               onClick={() => {
                 document
-                  .getElementById("#contact-form")
+                  .getElementById("contact-form")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="inline-block px-2 py-1 rounded bg-gray-500 text-white"
@@ -463,7 +435,7 @@ export default function Home() {
         </section>
         <section
           id="#popcorn-ceiling"
-          className="relative h-64 w-full flex flex-col items-center justify-center"
+          className="relative h-125 w-full flex flex-col items-center justify-center"
         >
           {/* Background image */}
           <div
@@ -488,7 +460,7 @@ export default function Home() {
             <button
               onClick={() => {
                 document
-                  .getElementById("#contact-form")
+                  .getElementById("contact-form")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="inline-block px-2 py-1 rounded bg-gray-500 text-white"
@@ -497,15 +469,17 @@ export default function Home() {
             </button>
           </div>
         </section>
+        </section>
 
         {/*services section end*/}
         {/* Content Section end*/}
 
-
-
-<section id="#contact-form"></section>
-        <ContactForm></ContactForm>
-{/** End of wrapper section */}
+        <section id="contact-form" className="w-full bg-gray-700 flex flex-row justify-center items-center p-8">
+<header className="text-5xl text-white font-bold ">Get in contact viw email with us here. Please allow up to 24 hours for dR Clean House to respond. </header>
+          <ContactFormDesktop></ContactFormDesktop>
+        </section>
+        
+        {/** End of wrapper section */}
       </section>
     </>
   );
