@@ -210,7 +210,7 @@ export default function Home() {
           <div className="relative inline-block">
       <button
         onClick={() => setOpen(!open)}
-        className="px-4 py-2 bg-green-600 text-white rounded"
+        className="px-4 py-2 bg-green-900 text-white rounded"
       >
         Menu
       </button>
@@ -225,6 +225,9 @@ export default function Home() {
           </button>
           <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#flooring")}>
             Flooring
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#exterior")}>
+            Exterior
           </button>
           <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("/constructionPage#painting")}>
             Painting
