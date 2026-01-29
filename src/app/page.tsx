@@ -11,6 +11,7 @@ import { useState } from "react";
 export default function Home() {
   const [cleaning, setCleaning] = useState(true);
   const [construction, setConstruction] = useState(false);
+   const [open, setOpen] = useState(false);
  const router = useRouter();
   const cleaningChange = () => {
     setConstruction(false);
@@ -205,7 +206,41 @@ export default function Home() {
           <header className="text-orange-300 font">
             We serve the Inland Empire, Orange County, and Los Angeles areas{" "}
           </header>
-          <button onClick={() => router.push("../constructionPage")}>Construction Services</button>
+          <button onClick={() => router.push("../constructionPage")}>View Our Construction Services</button>
+          <div className="relative inline-block">
+      <button
+        onClick={() => setOpen(!open)}
+        className="px-4 py-2 bg-green-600 text-white rounded"
+      >
+        Menu
+      </button>
+
+      {open && (
+        <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg">
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#bathroom")}>
+            Bathroom
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black " onClick={()=>router.push("./constructionPage#kitchen")}>
+            Kitchen
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#flooring")}>
+            Flooring
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("/constructionPage#painting")}>
+            Painting
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#painting")}>
+            Trim
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#painting")}>
+            Casing
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#flooring")}>
+            Extra Services 
+          </button>
+        </div>
+      )}
+    </div>
         </section>
 
         {/* Gray bar Section end */}
