@@ -1,5 +1,7 @@
 "use client";
 
+
+import { useRouter } from "next/navigation";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline"; // example icon
 import ContactForm from "./components/ContactFrom";
@@ -9,7 +11,7 @@ import { useState } from "react";
 export default function Home() {
   const [cleaning, setCleaning] = useState(true);
   const [construction, setConstruction] = useState(false);
-
+ const router = useRouter();
   const cleaningChange = () => {
     setConstruction(false);
     setCleaning(true);
@@ -203,6 +205,7 @@ export default function Home() {
           <header className="text-orange-300 font">
             We serve the Inland Empire, Orange County, and Los Angeles areas{" "}
           </header>
+          <button onClick={() => router.push("../constructionPage")}>Construction Services</button>
         </section>
 
         {/* Gray bar Section end */}
