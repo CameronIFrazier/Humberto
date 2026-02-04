@@ -61,10 +61,103 @@ export default function ConstructionPage() {
           <button onClick={() => router.push("../")} className="mt-4 text-orange-300 ">
             View Our Cleaning Services
           </button>
+          <div className="relative inline-block mt-2 z-11 flex justify-center items-center">
+            <button
+              onClick={() => setOpen(!open)}
+              className="px-4 py-2 bg-green-900 text-white rounded"
+            >
+              Menu
+            </button>
+
+            {open && (
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg">
+                <button
+                  className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black"
+                  onClick={() =>
+                    document
+                      .getElementById("bathroom")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Bathroom
+                </button>
+                <button
+                  className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black "
+                  onClick={() =>
+                    document
+                      .getElementById("kitchen")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Kitchen
+                </button>
+                <button
+                  className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black"
+                  onClick={() =>
+                    document
+                      .getElementById("flooring")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Flooring
+                </button>
+                <button
+                  className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black"
+                  onClick={() =>
+                    document
+                      .getElementById("exterior")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Exterior
+                </button>
+                <button
+                  className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black"
+                  onClick={() =>
+                    document
+                      .getElementById("painting")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Painting
+                </button>
+                <button
+                  className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black"
+                  onClick={() =>
+                    document
+                      .getElementById("painting")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Trim
+                </button>
+                <button
+                  className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black"
+                  onClick={() =>
+                    document
+                      .getElementById("painting")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Casing
+                </button>
+                <button
+                  className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black"
+                  onClick={() =>
+                    document
+                      .getElementById("flooring")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Extra Services
+                </button>
+              </div>
+            )}
+          </div>
         </section>
 
         {/* Begin List of stuff */}
-        <div className="relative h-64 w-full flex flex-col items-center justify-center">
+        <div className="relative h-64 w-full flex flex-col items-center justify-center" id="bathroom">
           {/* Background image */}
           <div
             className="absolute inset-0 bg-center bg-cover bg-no-repeat"
@@ -113,7 +206,7 @@ export default function ConstructionPage() {
           <header className="text-2xl text-gray-700">-Shower Valve</header>
           <header className="text-2xl text-gray-700">-Faucet</header>
         </section>
-        <div className="relative h-64 w-full flex flex-col items-center justify-center">
+        <div className="relative h-64 w-full flex flex-col items-center justify-center" id="kitchen">
           {/* Background image */}
           <div
             className="absolute inset-0 bg-center bg-cover bg-no-repeat"
@@ -125,7 +218,7 @@ export default function ConstructionPage() {
 
           {/* Content above overlay */}
           <section
-            id="#house-cleaning"
+            id="#kitchen"
             className="relative z-10 flex flex-col items-center justify-center gap-1 p-4 text-center"
           >
             <p className="text-white text-4xl font-bold">Kitchen</p>
@@ -158,7 +251,7 @@ export default function ConstructionPage() {
           <header className="text-2xl text-gray-700">-Garbage Disposal</header>
         </section>
 
-        <div className="relative h-64 w-full flex flex-col items-center justify-center">
+        <div className="relative h-64 w-full flex flex-col items-center justify-center" id="exterior">
           {/* Background image */}
           <div
             className="absolute inset-0 bg-center bg-cover bg-no-repeat"
@@ -209,7 +302,7 @@ export default function ConstructionPage() {
             -Low Voltage Lighting{" "}
           </header>
         </section>
-        <div className="relative h-64 w-full flex flex-col items-center justify-center">
+        <div className="relative h-64 w-full flex flex-col items-center justify-center" id="painting">
           {/* Background image */}
           <div
             className="absolute inset-0 bg-center bg-cover bg-no-repeat"
@@ -258,7 +351,7 @@ export default function ConstructionPage() {
           <header className="text-2xl text-gray-700">-Crown Molding</header>
           <header className="text-2xl text-gray-700">-Custom Cabinets</header>
         </section>
-        <div className="relative h-64 w-full flex flex-col items-center justify-center">
+        <div className="relative h-64 w-full flex flex-col items-center justify-center" id="flooring">
           {/* Background image */}
           <div
             className="absolute inset-0 bg-center bg-cover bg-no-repeat"

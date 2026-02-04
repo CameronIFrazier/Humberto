@@ -74,6 +74,43 @@ export default function Home() {
           <button onClick={() => router.push("../constructionPage")} className="mt-4 text-orange-300 ">
             View Our Construction Services
           </button>
+          <div className="relative inline-block z-11 mt-2">
+      <button
+        onClick={() => setOpen(!open)}
+        className="px-4 py-2 bg-green-900 text-white rounded"
+      >
+        Menu
+      </button>
+
+      {open && (
+        <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg">
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#bathroom")}>
+            Bathroom
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black " onClick={()=>router.push("./constructionPage#kitchen")}>
+            Kitchen
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#flooring")}>
+            Flooring
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#exterior")}>
+            Exterior
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("/constructionPage#painting")}>
+            Painting
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#painting")}>
+            Trim
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#painting")}>
+            Casing
+          </button>
+          <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 text-black" onClick={()=>router.push("./constructionPage#flooring")}>
+            Extra Services 
+          </button>
+        </div>
+      )}
+    </div>
         </section>
 
         {/*services section begin*/}
