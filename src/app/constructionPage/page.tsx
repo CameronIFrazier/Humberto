@@ -27,6 +27,7 @@ export default function ConstructionPage() {
               height={50} // adjust as needed
             ></Image>
           </div>
+          
         </section>
         {/* Header Scetion */}
         <section className="bg-gray-700 w-full flex flex-col items-center p-4 justify-center">
@@ -57,6 +58,9 @@ export default function ConstructionPage() {
               <header className="text-white text-sm ">900-509-6815</header>
             </div>
           </div>
+          <button onClick={() => router.push("../")} className="mt-4 text-orange-300 ">
+            View Our Cleaning Services
+          </button>
         </section>
 
         {/* Begin List of stuff */}
@@ -64,7 +68,7 @@ export default function ConstructionPage() {
           {/* Background image */}
           <div
             className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-            style={{ backgroundImage: "url('/images/cleaner-house.jpg')" }}
+            style={{ backgroundImage: "url('/images/bathroom.jpeg')" }}
           />
 
           {/* Dark overlay */}
@@ -113,7 +117,7 @@ export default function ConstructionPage() {
           {/* Background image */}
           <div
             className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-            style={{ backgroundImage: "url('/images/cleaner-house.jpg')" }}
+            style={{ backgroundImage: "url('/images/kitchen2.avif')" }}
           />
 
           {/* Dark overlay */}
@@ -158,7 +162,7 @@ export default function ConstructionPage() {
           {/* Background image */}
           <div
             className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-            style={{ backgroundImage: "url('/images/cleaner-house.jpg')" }}
+            style={{ backgroundImage: "url('/images/SmallHouseExteriors.jpg')" }}
           />
 
           {/* Dark overlay */}
@@ -209,7 +213,7 @@ export default function ConstructionPage() {
           {/* Background image */}
           <div
             className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-            style={{ backgroundImage: "url('/images/cleaner-house.jpg')" }}
+            style={{ backgroundImage: "url('/images/Painting.jpeg')" }}
           />
 
           {/* Dark overlay */}
@@ -258,7 +262,7 @@ export default function ConstructionPage() {
           {/* Background image */}
           <div
             className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-            style={{ backgroundImage: "url('/images/cleaner-house.jpg')" }}
+            style={{ backgroundImage: "url('/images/flooring.jpg')" }}
           />
 
           {/* Dark overlay */}
@@ -310,6 +314,10 @@ export default function ConstructionPage() {
         </section>
 
         <section id="#contact-form"></section>
+        <header className="text-2xl text-white font-bold bg-gray-700 text-center">
+            Get in contact via email with us here. Please allow up to 24 hours
+            for dR CleaN House to respond.{" "}
+          </header>
         <ContactForm></ContactForm>
       </section>
       {/* Desktop View  */}
@@ -479,7 +487,7 @@ export default function ConstructionPage() {
               <div
                 className="absolute inset-0 bg-center bg-cover bg-no-repeat"
                 style={{
-                  backgroundImage: "url('/images/cleaner-house.jpg')",
+                  backgroundImage: "url('/images/bathroom.jpeg')",
                 }}
               />
 
@@ -557,7 +565,7 @@ export default function ConstructionPage() {
               <div
                 className="absolute inset-0 bg-center bg-cover bg-no-repeat"
                 style={{
-                  backgroundImage: "url('/images/cleaner-house.jpg')",
+                  backgroundImage: "url('/images/kitchen2.avif')",
                 }}
               />
 
@@ -621,7 +629,7 @@ export default function ConstructionPage() {
               <div
                 className="absolute inset-0 bg-center bg-cover bg-no-repeat"
                 style={{
-                  backgroundImage: "url('/images/cleaner-house.jpg')",
+                  backgroundImage: "url('/images/SmallHouseExteriors.jpg')",
                 }}
               />
 
@@ -702,7 +710,7 @@ export default function ConstructionPage() {
               <div
                 className="absolute inset-0 bg-center bg-cover bg-no-repeat"
                 style={{
-                  backgroundImage: "url('/images/cleaner-house.jpg')",
+                  backgroundImage: "url('/images/flooring.jpg')",
                 }}
               />
 
@@ -764,7 +772,7 @@ export default function ConstructionPage() {
               <div
                 className="absolute inset-0 bg-center bg-cover bg-no-repeat"
                 style={{
-                  backgroundImage: "url('/images/cleaner-house.jpg')",
+                  backgroundImage: "url('/images/Painting.jpeg')",
                 }}
               />
 

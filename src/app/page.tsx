@@ -26,6 +26,7 @@ export default function Home() {
     <>
       <section className="bg-white min-h-screen w-full flex flex-col md:hidden items-center ">
         <section className=" w-full flex flex-row items-center justify-center pt-4 bg-white">
+          
           <div className="w-full flex flex-row items-center justify-center relative">
             <Image
               src={"/images/image.png"}
@@ -36,6 +37,7 @@ export default function Home() {
             ></Image>
           </div>
         </section>
+        
         {/* Header Scetion */}
         <section className="bg-gray-700 w-full flex flex-col items-center p-4 justify-center">
           <div className="w-[75%] flex flex-col items-start justify-start">
@@ -69,6 +71,9 @@ export default function Home() {
               <header className="text-white text-sm ">900-509-6815</header>
             </div>
           </div>
+          <button onClick={() => router.push("../constructionPage")} className="mt-4 text-orange-300 ">
+            View Our Construction Services
+          </button>
         </section>
 
         {/*services section begin*/}
@@ -147,6 +152,10 @@ export default function Home() {
         {/* Content Section end*/}
 
         <section id="#contact-form"></section>
+        <header className="text-2xl text-white font-bold bg-gray-700 text-center">
+            Get in contact via email with us here. Please allow up to 24 hours
+            for dR CleaN House to respond.{" "}
+          </header>
         <ContactForm></ContactForm>
       </section>
 
