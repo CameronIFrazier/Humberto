@@ -1,0 +1,30 @@
+/* app/globals.css */
+@import "tailwindcss";
+
+@theme {
+  /* FONTS */
+  --font-display: var(--font-display), Georgia, serif;
+  --font-sans: var(--font-body), sans-serif;
+
+  /* COLORS */
+  --color-forest: #0d2b22;
+  --color-mint: #c8f0e4;
+  --color-sage: #6ba88a;
+  --color-cream: #f7f4ef;
+  --color-green-700: #1a6648;
+  --color-green-800: #154d36;
+
+  /* ANIMATIONS */
+  --animate-fade-up: fade-up 0.8s ease both;
+  --animate-float: float 4s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+  }
+}
