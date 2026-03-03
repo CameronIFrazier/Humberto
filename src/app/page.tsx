@@ -35,10 +35,7 @@ function Hero() {
       <div className="absolute -right-40 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-mint to-sage/20 opacity-60 animate-pulse pointer-events-none" />
 
       <div className="relative z-10 animate-fade-up">
-        <div className="inline-flex items-center gap-2 bg-mint text-green-800 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8">
-          <span className="w-2 h-2 rounded-full bg-green-700 inline-block" />
-          Trusted &amp; Professional
-        </div>
+        
 
         <h1 className="font-display text-5xl md:text-6xl xl:text-7xl font-bold text-forest leading-[1.08] mb-6">
           A cleaner space,<br />
