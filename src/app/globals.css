@@ -1,6 +1,10 @@
 /* app/globals.css */
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   /* FONTS */
   --font-display: var(--font-display), Georgia, serif;

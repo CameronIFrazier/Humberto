@@ -13,7 +13,7 @@ function Nav() {
       <Image src="/images/image.png" alt="dR CleaN House Logo" width={80} height={80} className="object-contain" />
       <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-forest/70">
         <li><a href="#cleaning" className="hover:text-forest transition-colors">Cleaning</a></li>
-        <li><a href="#construction" className="hover:text-forest transition-colors">Construction</a></li>
+        <li><a href="#construction" className="hover:text-forest transition-colors">Other Services</a></li>
         <li><a href="#why" className="hover:text-forest transition-colors">Why Us</a></li>
         <li>
           <a
@@ -155,24 +155,19 @@ function CleaningServices() {
   );
 }
 
-// ─── CONSTRUCTION SERVICES ───────────────────────────────────────────────────
+// ─── OTHER SERVICES ──────────────────────────────────────────────────────────
 const constructionServices = [
   { icon: "🎨", title: "Painting",                desc: "Professional interior and exterior painting services that refresh and protect your space. We deliver clean lines, even coverage, and long-lasting results." },
-  { icon: "🧱", title: "Drywall",                 desc: "Expert drywall installation and repair for smooth, seamless walls and ceilings. Our work prepares your space perfectly for paint or finishing." },
-  { icon: "🪵", title: "Flooring",                desc: "Quality flooring installation and replacement to improve comfort, durability, and style. We work with a variety of materials to match your vision." },
-  { icon: "🏚️", title: "Concrete",               desc: "Reliable concrete services for patios, walkways, and structural surfaces. Built to withstand daily use while enhancing your property's appearance." },
   { icon: "🏠", title: "Popcorn Ceiling Removal", desc: "Safe and efficient popcorn ceiling removal to modernize your home. We leave behind a smooth, clean finish ready for paint or texture." },
-  { icon: "🌿", title: "Decks & Porches",         desc: "Custom deck and porch construction designed to extend your outdoor living space. We focus on durability, safety, and visual appeal." },
-  { icon: "🍳", title: "Kitchen Remodeling",      desc: "Complete kitchen remodeling services tailored to your needs and style. From layout to finishes, we create functional and beautiful kitchens." },
-  { icon: "🛁", title: "Bath Remodeling",         desc: "Bathroom remodeling solutions that enhance comfort, function, and design. We transform outdated bathrooms into clean, modern spaces." },
+  { icon: "🔨", title: "Construction Services", desc: "We offer a range of construction services depending on availability. Give us a call first to discuss your project and confirm whether we can take it on — we'll let you know what's possible!" },
 ];
 
 function ConstructionServices() {
   return (
     <section id="construction" className="bg-cream px-8 md:px-16 py-24">
-      <p className="text-xs font-semibold uppercase tracking-widest text-green-700 mb-4">Special Services</p>
+      <p className="text-xs font-semibold uppercase tracking-widest text-green-700 mb-4">Other Services</p>
       <h2 className="font-display text-4xl md:text-5xl font-bold text-forest max-w-lg leading-tight mb-16">
-        Construction &amp; remodeling — <em className="text-green-700 not-italic">and much more</em>
+        Other services <em className="text-green-700 not-italic">and more...</em>
       </h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {constructionServices.map(({ icon, title, desc }) => (
@@ -202,7 +197,7 @@ function ConstructionServices() {
 const perks = [
   { icon: "📍", title: "Serving 3 Regions",        desc: "Proudly serving the Inland Empire, Orange County, and Los Angeles areas." },
   { icon: "🧹", title: "Full-Service Cleaning",     desc: "From regular maintenance to deep cleans and post-construction — we do it all." },
-  { icon: "🔨", title: "Construction & Remodeling", desc: "One company for cleaning and construction. Kitchen, bath, flooring, painting and more." },
+  { icon: "🔨", title: "Other Services & More...", desc: "One company for all your needs. Painting, popcorn ceiling removal, and much more." },
   { icon: "📅", title: "Up to 24hr Response",       desc: "Reach out via email and expect a response within 24 hours. We make it easy." },
 ];
 
@@ -337,7 +332,7 @@ function Footer() {
       <ul className="flex gap-7 text-sm">
         {[
           { label: "Cleaning", href: "#cleaning" },
-          { label: "Construction", href: "#construction" },
+          { label: "Other Services", href: "#construction" },
           { label: "Why Us", href: "#why" },
           { label: "Contact", href: "#contact" },
         ].map(({ label, href }) => (
